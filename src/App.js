@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Navigation />
+      <main>
+        <AboutMe />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Education />
+        <Contact />
+      </main>
+      <footer>
+        <p>© {new Date().getFullYear()} Matthias Polen. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 }
